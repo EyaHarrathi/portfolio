@@ -1815,7 +1815,7 @@ export default function Portfolio() {
               <span className="text-2xl font-bold gradient-text">Eya Harrathi</span>
             </div>
             <p className="text-gray-400 text-lg">
-              © 2024 Eya Harrathi. All rights reserved. Built with passion and modern technologies.
+              © 2025 Eya Harrathi. All rights reserved. Built with passion and modern technologies.
             </p>
             <p className="text-gray-500 mt-2">Crafting exceptional digital experiences, one line of code at a time.</p>
           </div>
