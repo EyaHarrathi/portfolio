@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Download, FileText, X } from "lucide-react"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Download, FileText, X } from "lucide-react";
 
 export function CVDownload() {
-  const [showPreview, setShowPreview] = useState(false)
+  const [showPreview, setShowPreview] = useState(false);
 
   const downloadCV = () => {
     // Create CV content as HTML
@@ -337,8 +337,8 @@ export function CVDownload() {
         <div class="contact-info">
             <div class="contact-grid">
                 <div class="contact-item">
-                    <div class=" text-black contact-icon">📍</div>
-                   <span class="text-black">13 rue ibn hazm, Kairouan</span>
+                    <div class="contact-icon">📍</div>
+                    <span>13 rue ibn hazm, Kairouan</span>
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon">📞</div>
@@ -535,19 +535,19 @@ export function CVDownload() {
     </div>
 </body>
 </html>
-    `
+    `;
 
     // Create and download the file
-    const blob = new Blob([cvContent], { type: "text/html" })
-    const url = URL.createObjectURL(blob)
-    const a = document.createElement("a")
-    a.href = url
-    a.download = "CV_Eya_Harrathi.html"
-    document.body.appendChild(a)
-    a.click()
-    document.body.removeChild(a)
-    URL.revokeObjectURL(url)
-  }
+    const blob = new Blob([cvContent], { type: "text/html" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "CV_Eya_Harrathi.html";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
 
   return (
     <>
@@ -598,7 +598,7 @@ export function CVDownload() {
         </div>
       )}
     </>
-  )
+  );
 }
 
 function CVPreview() {
@@ -616,15 +616,21 @@ function CVPreview() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
             <div className="flex items-center justify-center gap-2">
               <span className="text-green-500">📍</span>
-              <span className="text-sm">13 rue ibn hazm, Kairouan</span>
+              <span className="text-sm text-gray-800 font-medium">
+                13 rue ibn hazm, Kairouan
+              </span>
             </div>
             <div className="flex items-center justify-center gap-2">
               <span className="text-green-500">📞</span>
-              <span className="text-sm">+216 99087501</span>
+              <span className="text-sm text-gray-800 font-medium">
+                +216 99087501
+              </span>
             </div>
             <div className="flex items-center justify-center gap-2">
               <span className="text-green-500">✉️</span>
-              <span className="text-sm">harrathia79@gmail.com</span>
+              <span className="text-sm text-gray-800 font-medium">
+                harrathia79@gmail.com
+              </span>
             </div>
           </div>
         </div>
@@ -637,9 +643,11 @@ function CVPreview() {
             </h2>
             <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
               <p className="text-gray-700 leading-relaxed">
-                Développeuse informatique diplômée, passionnée par la création de solutions innovantes. À la recherche
-                d'opportunités pour contribuer au développement d'applications web et mobiles en mettant à profit mes
-                compétences en programmation full-stack et en design UI/UX.
+                Développeuse informatique diplômée, passionnée par la création
+                de solutions innovantes. À la recherche d'opportunités pour
+                contribuer au développement d'applications web et mobiles en
+                mettant à profit mes compétences en programmation full-stack et
+                en design UI/UX.
               </p>
             </div>
           </section>
@@ -653,15 +661,27 @@ function CVPreview() {
               <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                 <div className="flex justify-between items-start mb-3">
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-800">Projet Académique : EcoMarket</h3>
-                    <p className="text-blue-600 font-medium">Plateforme de commerce social</p>
+                    <h3 className="text-lg font-semibold text-gray-800">
+                      Projet Académique : EcoMarket
+                    </h3>
+                    <p className="text-blue-600 font-medium">
+                      Plateforme de commerce social
+                    </p>
                   </div>
-                  <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm">2023 – 2024</span>
+                  <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm">
+                    2023 – 2024
+                  </span>
                 </div>
                 <ul className="text-gray-600 space-y-2 text-sm">
-                  <li>• Développement full stack utilisant React.js, Bootstrap 5, Spring Boot, Neo4j et MongoDB</li>
+                  <li>
+                    • Développement full stack utilisant React.js, Bootstrap 5,
+                    Spring Boot, Neo4j et MongoDB
+                  </li>
                   <li>• Conception d'une architecture réseau innovante</li>
-                  <li>• Implémentation d'un système de recommandation basé sur des points</li>
+                  <li>
+                    • Implémentation d'un système de recommandation basé sur des
+                    points
+                  </li>
                   <li>• Création de deux versions (gratuite et premium)</li>
                   <li>• Travail en méthodologie agile avec 4 sprints</li>
                 </ul>
@@ -670,13 +690,22 @@ function CVPreview() {
               <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                 <div className="flex justify-between items-start mb-3">
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-800">Stage Développeuse Web</h3>
-                    <p className="text-blue-600 font-medium">Soretrac Kairouan</p>
+                    <h3 className="text-lg font-semibold text-gray-800">
+                      Stage Développeuse Web
+                    </h3>
+                    <p className="text-blue-600 font-medium">
+                      Soretrac Kairouan
+                    </p>
                   </div>
-                  <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm">07-2023 – 08-2023</span>
+                  <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm">
+                    07-2023 – 08-2023
+                  </span>
                 </div>
                 <ul className="text-gray-600 space-y-2 text-sm">
-                  <li>• Conception et développement d'un site web pour l'octroi de bourses</li>
+                  <li>
+                    • Conception et développement d'un site web pour l'octroi de
+                    bourses
+                  </li>
                   <li>• Collaboration avec les équipes internes</li>
                 </ul>
               </div>
@@ -684,10 +713,16 @@ function CVPreview() {
               <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                 <div className="flex justify-between items-start mb-3">
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-800">Stage Développeuse Front-End</h3>
-                    <p className="text-blue-600 font-medium">CyberPark (Société Etnafes)</p>
+                    <h3 className="text-lg font-semibold text-gray-800">
+                      Stage Développeuse Front-End
+                    </h3>
+                    <p className="text-blue-600 font-medium">
+                      CyberPark (Société Etnafes)
+                    </p>
                   </div>
-                  <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm">06-2024 – 07-2024</span>
+                  <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm">
+                    06-2024 – 07-2024
+                  </span>
                 </div>
                 <ul className="text-gray-600 space-y-2 text-sm">
                   <li>• Développement d'une application web en Nuxt.js</li>
@@ -700,15 +735,21 @@ function CVPreview() {
 
           {/* Education */}
           <section>
-            <h2 className="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-green-500 pb-2">Formations</h2>
+            <h2 className="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-green-500 pb-2">
+              Formations
+            </h2>
             <div className="space-y-4">
               <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                 <div className="flex justify-between items-start mb-3">
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-800">Licence en Informatique (GLSI)</h3>
+                    <h3 className="text-lg font-semibold text-gray-800">
+                      Licence en Informatique (GLSI)
+                    </h3>
                     <p className="text-blue-600 font-medium">ISIGK, Kairouan</p>
                   </div>
-                  <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm">2022 – 2025</span>
+                  <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm">
+                    2022 – 2025
+                  </span>
                 </div>
                 <p className="text-gray-600 text-sm">Diplômée en Juin 2025</p>
               </div>
@@ -716,12 +757,20 @@ function CVPreview() {
               <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
                 <div className="flex justify-between items-start mb-3">
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-800">Baccalauréat Mathématiques</h3>
-                    <p className="text-blue-600 font-medium">Lycée Ibn Rachik, Kairouan</p>
+                    <h3 className="text-lg font-semibold text-gray-800">
+                      Baccalauréat Mathématiques
+                    </h3>
+                    <p className="text-blue-600 font-medium">
+                      Lycée Ibn Rachik, Kairouan
+                    </p>
                   </div>
-                  <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm">2021 – 2022</span>
+                  <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm">
+                    2021 – 2022
+                  </span>
                 </div>
-                <p className="text-gray-600 text-sm font-semibold">Mention Bien</p>
+                <p className="text-gray-600 text-sm font-semibold">
+                  Mention Bien
+                </p>
               </div>
             </div>
           </section>
@@ -736,21 +785,33 @@ function CVPreview() {
                 <div>
                   <h3 className="font-semibold text-gray-800 mb-2">Langages</h3>
                   <div className="flex flex-wrap gap-2">
-                    {["Java", "JavaScript", "HTML", "CSS", "Python"].map((skill) => (
-                      <span key={skill} className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">
-                        {skill}
-                      </span>
-                    ))}
+                    {["Java", "JavaScript", "HTML", "CSS", "Python"].map(
+                      (skill) => (
+                        <span
+                          key={skill}
+                          className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm"
+                        >
+                          {skill}
+                        </span>
+                      )
+                    )}
                   </div>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-800 mb-2">Front-end</h3>
+                  <h3 className="font-semibold text-gray-800 mb-2">
+                    Front-end
+                  </h3>
                   <div className="flex flex-wrap gap-2">
-                    {["React.js", "Nuxt.js", "Vue.js", "Bootstrap 5"].map((skill) => (
-                      <span key={skill} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
-                        {skill}
-                      </span>
-                    ))}
+                    {["React.js", "Nuxt.js", "Vue.js", "Bootstrap 5"].map(
+                      (skill) => (
+                        <span
+                          key={skill}
+                          className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+                        >
+                          {skill}
+                        </span>
+                      )
+                    )}
                   </div>
                 </div>
               </div>
@@ -758,14 +819,21 @@ function CVPreview() {
                 <div>
                   <h3 className="font-semibold text-gray-800 mb-2">Back-end</h3>
                   <div className="flex flex-wrap gap-2">
-                    <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Spring Boot</span>
+                    <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">
+                      Spring Boot
+                    </span>
                   </div>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-800 mb-2">Bases de données</h3>
+                  <h3 className="font-semibold text-gray-800 mb-2">
+                    Bases de données
+                  </h3>
                   <div className="flex flex-wrap gap-2">
                     {["MySQL", "Oracle", "MongoDB", "Neo4j"].map((skill) => (
-                      <span key={skill} className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">
+                      <span
+                        key={skill}
+                        className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm"
+                      >
                         {skill}
                       </span>
                     ))}
@@ -777,7 +845,9 @@ function CVPreview() {
 
           {/* Languages */}
           <section>
-            <h2 className="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-green-500 pb-2">Langues</h2>
+            <h2 className="text-2xl font-bold text-gray-800 mb-4 border-b-2 border-green-500 pb-2">
+              Langues
+            </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
                 { lang: "Français", level: "Avancé" },
@@ -785,7 +855,10 @@ function CVPreview() {
                 { lang: "Turc", level: "Débutant" },
                 { lang: "Espagnol", level: "Débutant" },
               ].map((item) => (
-                <div key={item.lang} className="text-center p-3 bg-gray-50 rounded-lg">
+                <div
+                  key={item.lang}
+                  className="text-center p-3 bg-gray-50 rounded-lg"
+                >
                   <div className="font-semibold text-gray-800">{item.lang}</div>
                   <div className="text-sm text-blue-600">{item.level}</div>
                 </div>
@@ -810,5 +883,5 @@ function CVPreview() {
         </div>
       </div>
     </div>
-  )
+  );
 }
